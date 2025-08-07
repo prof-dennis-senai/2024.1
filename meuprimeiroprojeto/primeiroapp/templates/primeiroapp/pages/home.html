@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    header{
-        background-color: black;
-        color: white;
-    }
+{% extends "primeiroapp/base.html" %}
 
-    header a{
-        color: white;
-    }
+{% block title %}Home title{% endblock title %}
 
-    header a:hover{
-        color: red;
-    }
-</style>
-<body>
-    {% for i in lista_num %}
-        <h{{i}}>Lista {{ i }}</h{{i}}>
-        {% include 'primeiroapp/partials/header.html' with idade=10 %}
-        <hr>
-    {% endfor %}
-    <h1>Home 1</h1>
-
-</body>
-</html>
+{% block content %}
+    <h1>Home block</h1>
+    <ul>
+        {% for num in lista_num %}
+            <li>{{num}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
