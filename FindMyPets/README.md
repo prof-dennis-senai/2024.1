@@ -42,8 +42,10 @@ O **FindMyPet** tem como objetivo facilitar a busca por animais desaparecidos po
 
 ### ✅ 1. Clone o repositório
 
+Realize o fork do projeto para o seu github, depois realize o clone alterando para o seu usuário.
+
 ```bash
-git clone https://github.com/prof-dennis-senai/2024.1
+git clone https://github.com/SEU_USUARIO/2024.1
 cd FindMyPets
 ```
 
