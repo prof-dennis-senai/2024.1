@@ -1,0 +1,49 @@
+O que você já fez:
+Criou os ViewSets para Pet e Tutor.
+
+Registrou esses ViewSets no router para criar os endpoints básicos (/pets/, /pets/{id}, /tutores/ etc).
+
+Criou a home simples com links para /pets e /tutores.
+
+O que falta para completar os endpoints da atividade?
+Endpoints para solicitacoes associados a pets
+
+Na tabela tem:
+
+GET /pets/{id}/solicitacoes
+
+POST /pets/{id}/solicitacoes
+
+PATCH /pets/{id}/solicitacoes
+
+Para isso, precisa ter:
+
+Model e serializer para Solicitacao (se não tiver ainda)
+
+Views (ViewSet ou View) para esses endpoints (provavelmente como nested routes ou endpoints customizados)
+
+Registrar as rotas no router
+
+Endpoints para filtrar pets por status:
+
+GET /pets/encontrados
+
+GET /pets/perdidos
+
+Isso pode ser feito com filtros nas views, criando rotas customizadas para listar pets por status
+
+Resumo do que falta para sua parte:
+Implementar a parte da API que trata solicitacoes dos pets
+
+Adicionar filtros ou rotas específicas para encontrados e perdidos
+
+Como fazer rápido (visão geral):
+Criar Model Solicitacao (se não existir)
+
+Criar Serializer para Solicitacao
+
+Criar ViewSet para Solicitacao (ligada a um pet)
+
+No urls.py da app, usar routers aninhados para fazer /pets/{id}/solicitacoes
+
+No PetViewSet, criar actions customizadas para encontrados e perdidos, usando decorador @action do DRF para criar rotas tipo /pets/encontrados

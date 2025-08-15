@@ -1,4 +1,5 @@
 {% extends "app_pets/base.html" %}
+
 {% block title %}Home - Find My Pets{% endblock title %}
 
 {% block content %}
@@ -6,5 +7,16 @@
     <h1>Welcome to Find My Pets</h1>
     <p>Your one-stop solution for finding lost pets.</p>
 
+    <h2>API Endpoints</h2>
+    <ul>
+        <li><a href="/api/pets/">Pets</a></li>
+        <li><a href="/api/tutores/">Tutores</a></li>
+    </ul>
+
+    <h3>Endpoints adicionais (usam o ID do pet)</h3>
+    <ul>
+        <li><code>GET /api/pets/&lt;id&gt;/solicitacoes/</code> – Lista solicitações de um pet</li>
+        <li><code>POST /api/pets/&lt;id&gt;/nova_solicitacao/</code> – Cria nova solicitação para um pet</li>
+    </ul>
 </div>
 {% endblock content %}
