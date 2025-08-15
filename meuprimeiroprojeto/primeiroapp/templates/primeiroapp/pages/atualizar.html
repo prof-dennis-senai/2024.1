@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>Teste block</h1>
-    <form action="/atualizar_item/" method="post">
+    <form action="/atualizar_item/{{item_id}}" method="post">
         {% csrf_token %} 
         
         <input type="text" name="nome" placeholder="Nome do produto">
@@ -12,9 +12,4 @@
         <button type="submit">Enviar</button>
 
     </form>
-    <ul>
-        {% for item in produtos %}
-            <li>{{item.nome}} - <a href="/remover_item/{{item.id}}">Remover</a> - <a href="/atualizar_item/{{item.id}}">Atualizar</a></li>
-        {% endfor %}
-    </ul>
 {% endblock content %}
