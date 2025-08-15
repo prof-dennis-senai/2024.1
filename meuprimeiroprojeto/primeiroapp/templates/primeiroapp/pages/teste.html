@@ -1,0 +1,12 @@
+{% extends "primeiroapp/base.html" %}
+
+{% block title %}Teste title{% endblock title %}
+
+{% block content %}
+    <h1>Teste block</h1>
+    <ul>
+        {% for item in produtos %}
+            <li>{{item.nome}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
