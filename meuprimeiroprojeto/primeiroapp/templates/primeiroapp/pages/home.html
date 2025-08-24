@@ -1,0 +1,12 @@
+{% extends "primeiroapp/base.html" %}
+
+{% block title %}Home title{% endblock title %}
+
+{% block content %}
+    <h1>Home block</h1>
+    <ul>
+        {% for num in lista_num %}
+            <li>{{num}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "primeiroapp/base.html" %}
+
+{% block title %}Teste title{% endblock title %}
+
+{% block content %}
+    <h1>Teste block</h1>
+    <form action="/atualizar_item/{{item_id}}" method="post">
+        {% csrf_token %} 
+        
+        <input type="text" name="nome" placeholder="Nome do produto">
+        <input type="number" name="number" placeholder="Preço do produto">
+        <button type="submit">Enviar</button>
+
+    </form>
+{% endblock content %}
