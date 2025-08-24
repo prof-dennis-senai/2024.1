@@ -2,9 +2,19 @@
 {% block title %}Home - Find My Pets{% endblock title %}
 
 {% block content %}
+<!-- Include the header partial -->
+{% include 'app_pets/partials/header.html' %}
+
+<html lang="pt-br" data-bs-theme="dark">
+
 <div class="container">
     <h1>Welcome to Find My Pets</h1>
     <p>Your one-stop solution for finding lost pets.</p>
-
 </div>
+
 {% endblock content %}
+
+{% block footer %}
+    <!-- Include the footer partial -->
+    {% include 'app_pets/partials/footer.html' %}
+{% endblock footer %}
