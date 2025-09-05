@@ -10,6 +10,12 @@
 <div class="container">
     <h1>Welcome to Find My Pets</h1>
     <p>Your one-stop solution for finding lost pets.</p>
+
+    {% if user.is_authenticated %}
+        <p>Logged in as: {{ user.username }}</p>
+    {% else %}
+        <p>You are not logged in.</p>
+    {% endif %}
 </div>
 
 {% endblock content %}
