@@ -1,0 +1,67 @@
+{% extends "global/base.html" %}
+{%load static%}
+{% block title %}Listagem de Pets - Find My Pets{% endblock title %}]
+
+{% block content %}
+<div class="container" style="max-width: 968px;">
+    <h1>Cadastro de Pets</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="nome">Nome do Pet</label>
+            <input type="text" name="nome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+            <label for="raca">Raça</label>
+            <input type="text" name="raca" placeholder="Raça">
+        </div>
+        <div class="form-group">
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="date" name="data_nascimento" placeholder="Data de Nascimento">
+        </div>
+        <div>
+            <label for="especie">Espécie</label>
+            <input type="text" name="especie" placeholder="Espécie">
+        </div>
+        <div>
+            <label for="sexo">Sexo</label>
+            <input type="text" name="sexo" placeholder="Sexo">
+        </div>
+        <div>
+            <label for="porte">Porte</label>
+            <input type="text" name="porte" placeholder="Porte">
+        </div>
+        <div>
+            <label for="cor">Cor</label>
+            <input type="text" name="cor" placeholder="Cor">
+        </div>
+        <div>
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao" placeholder="Descrição">
+        </div>
+        <div>
+            <label for="microchip_codigo">Código Microchip</label>
+            <input type="text" name="microchip_codigo" placeholder="Código Microchip">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" id="status_id">
+                <option value="Disponível">Disponível</option>
+                <option value="Adoção">Adoção</option>
+                <option value="Adotado">Adotado</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="checkbox" name="manter_cadastro" id="manter_cadastro" value="{{manter_cadastro}}">
+            <label for="manter_cadastro">Manter cadastro</label>
+        </div>
+
+        <button type="submit">Salvar</button>
+    </form>
+    
+
+</div>
+
+{% endblock content %}
