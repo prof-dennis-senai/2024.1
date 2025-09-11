@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{% static 'app_pets/images/logo_tratada_fundo_escuro_compacto.svg' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'global/images/logo_tratada_fundo_escuro_compacto.svg' %}">
     <title>{% block title %}{% endblock title %}</title>
 
     <!-- Bootstrap CSS -->
@@ -23,11 +23,15 @@
     {% block styles %}{% endblock styles %}
 </head>
 <body>    
+    {% include 'global/partials/header.html' %}
+
     {% block content %}{% endblock content %}
 
-    {% block footer %}{% endblock footer %}
+    {% include 'global/partials/footer.html' %}
 
     {% block scripts %}{% endblock scripts %}
+
+    <script src="{% static 'global/js/alterar_tema.js' %}"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

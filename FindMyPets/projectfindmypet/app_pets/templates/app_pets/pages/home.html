@@ -1,9 +1,7 @@
-{% extends "app_pets/base.html" %}
+{% extends "global/base.html" %}
 {% block title %}Home - Find My Pets{% endblock title %}
 
 {% block content %}
-<!-- Include the header partial -->
-{% include 'app_pets/partials/header.html' %}
 
 <html lang="pt-br" data-bs-theme="dark">
 
@@ -22,5 +20,5 @@
 
 {% block footer %}
     <!-- Include the footer partial -->
-    {% include 'app_pets/partials/footer.html' %}
+    {% include 'global/partials/footer.html' %}
 {% endblock footer %}
