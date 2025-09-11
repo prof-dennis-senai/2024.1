@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'app_pets',
+    'app_accounts',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'app_pets.CustomUser'
+AUTH_USER_MODEL = 'app_accounts.CustomUser'
 
 
 # Internationalization
