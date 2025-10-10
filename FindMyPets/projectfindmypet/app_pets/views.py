@@ -8,7 +8,7 @@ from utils.send_email_utils.send_email_utils import enviar_email_cadastro_bem_vi
 
 @login_required
 def home(request):
-    enviar_email_cadastro_bem_vindo("seu_email@gmail.com", "João")
+    # enviar_email_cadastro_bem_vindo("seu_email@gmail.com", "João")
     return render(request, 'app_pets/pages/home.html')
 
 def listagem_pets(request):
